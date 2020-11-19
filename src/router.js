@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const filterHandler = require('./habdler');
 
 const extentions = {
   '.css': 'text/css',
@@ -38,6 +39,8 @@ const router = (request, response) => {
         response.end(file);
       }
     });
+  } else if (endPoint === '/frag' && reqMethod === 'POST') {
+    filterHandler(request, response);
   } else {
     response.writeHead(404, { 'content-type': 'text/html' });
     response.end('<h1>404</h1>');
