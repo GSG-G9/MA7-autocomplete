@@ -5,6 +5,6 @@ const wordFilter = (frag, array) => array.filter(
 
 export default wordFilter;
 
-if (module !== 'undefined') {
+if (typeof module !== 'undefined') {
   module.exports = wordFilter;
 }
