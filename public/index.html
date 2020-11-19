@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="shortcut icon" href="./img/examples-icon.png" type="image/x-icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,500;1,600;1,900&display=swap"
       rel="stylesheet"
@@ -13,21 +14,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>Autocomplete</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rem.
-      </p>
+      <div class="title">
+        <h1>Autocomplete</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rem.
+        </p>
+      </div>
       <div class="form-box">
-        <input type="text" value="" id="autocomplete-input" placeholder="Eneter Any Word..." />
-        <div class="result" id="autocomplete-result">
-          <div class="result-item"></div>
-          <div class="result-item"></div>
-          <div class="result-item"></div>
-          <div class="result-item"></div>
-          <div class="result-item"></div>
-        </div>
+        <input
+          type="text"
+          value=""
+          id="autocomplete-input"
+          placeholder="Eneter Any Word..."
+        />
+        <div class="result hidden" id="autocomplete-result"></div>
       </div>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" type="module" defer></script>
   </body>
 </html>

@@ -6,7 +6,26 @@ const extentions = {
   '.css': 'text/css',
   '.js': 'text/javascript',
   '.html': 'text/html',
+  '.png': 'image/png',
 };
+
+// const pathFile = path.join(__dirname, 'words.txt');
+// const pathFileJSON = path.join(__dirname, 'dictionary.json');
+// const arr = [];
+
+// fs.readFile(pathFile, 'utf8', (err, data) => {
+//   if (err) {
+//     throw err;
+//   }
+//   const myData = data.split('\n');
+//   // myData.forEach((item) => arr.push(item));
+
+//   fs.writeFile(pathFileJSON, JSON.stringify(myData, null, 2), (err) => {
+//     if (err) {
+//       throw err;
+//     }
+//   });
+// });
 
 const router = (request, response) => {
   const endPoint = request.url;
