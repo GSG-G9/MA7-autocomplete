@@ -2,6 +2,8 @@
 
 Visit this [Link](https://ma7-auto.herokuapp.com/) to view our App
 
+![Demo gif image](/public/img/demo.gif "demo image")
+
 ### Team members:-
 
 - Muhammad Alabadsa
