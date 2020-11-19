@@ -1,3 +1,6 @@
+import wordFilter from './utils';
+import testArray from './test-data';
+
 const inputSearch = document.getElementById('autocomplete-input');
 const autocompleteResult = document.getElementById('autocomplete-result');
 
