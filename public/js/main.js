@@ -27,10 +27,6 @@ function renderDom(arrResult) {
     resultItem.style.animationTimingFunction = 'ease-in';
     resultItem.style.animationFillMode = 'forwards';
     resultItem.textContent = element;
-
-    // if (resultItem.classList.contains('hidden')) {
-    //   resultItem.classList.remove('hidden');
-    // }
     autocompleteResult.appendChild(resultItem);
   });
   i = 100;
