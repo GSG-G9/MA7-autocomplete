@@ -1,4 +1,4 @@
-const { wordFilter } = require('./utils');
+const wordFilter = require('./utils');
 
 // eslint-disable-next-line no-undef
 test('Filter ArraOf String Get ["aa", "ab", "cs"]', () => {

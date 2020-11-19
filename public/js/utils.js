@@ -3,6 +3,4 @@ const wordFilter = (frag, array) => array.filter(
       === frag.toLowerCase().trim(),
 );
 
-if (module !== 'undefined') {
-  module.exports = { wordFilter };
-}
+module.exports = wordFilter;
