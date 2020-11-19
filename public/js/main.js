@@ -15,21 +15,34 @@ const debounce = (func, delay) => {
 
 // const audio = new Audio('./sound/sound.mp3');
 
-function renderDom(arrResult) {
+function renderDom(event, arrResult) {
+  const inpuEvent = event;
   while (autocompleteResult.hasChildNodes()) {
     autocompleteResult.removeChild(autocompleteResult.lastChild);
   }
   let i = 100;
   arrResult.forEach((element) => {
     const resultItem = document.createElement('div');
+    const matchLetter = document.createElement("span");
+    const nonMatchLetters = document.createElement("span");
+
     resultItem.setAttribute('class', `result-item fade-${i += 100}`);
+    matchLetter.setAttribute('class', 'match-letters');
+    nonMatchLetters.setAttribute('class', 'non-match-letters');
+
     // audio.play();
     resultItem.style.animationDelay = `${i}ms`;
     resultItem.style.animationName = 'fade';
     resultItem.style.animationDuration = '0.25s';
     resultItem.style.animationTimingFunction = 'ease-in';
     resultItem.style.animationFillMode = 'forwards';
-    resultItem.textContent = element;
+    matchLetter.textContent = element.substr(0, inpuEvent.target.value.length);
+    nonMatchLetters.textContent = element.substr(inpuEvent.target.value.length);
+    resultItem.append(matchLetter, nonMatchLetters);
+    resultItem.dataset.value = element;
+    resultItem.addEventListener('click', (e) => {
+      inpuEvent.target.value = e.target.dataset.value;
+    });
     autocompleteResult.appendChild(resultItem);
   });
   i = 100;
@@ -39,12 +52,12 @@ inputSearch.addEventListener(
   'input',
   debounce((e) => {
     // eslint-disable-next-line no-console
-    console.log(e.target.value);
+    // console.log(e.target.value);
     let result = wordFilter(e.target.value, testArray);
     if (!e.target.value) {
       result = [];
     }
-    renderDom(result);
+    renderDom(e, result);
   }),
   1000,
 );
