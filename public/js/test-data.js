@@ -50,3 +50,5 @@ const testArray = [
   'shurrab',
   'muhammad',
 ];
+
+export default testArray;

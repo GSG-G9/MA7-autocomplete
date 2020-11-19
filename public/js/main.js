@@ -10,7 +10,7 @@ const debounce = (func, delay) => {
   };
 };
 
-const audio = new Audio('./sound/sound.mp3');
+// const audio = new Audio('./sound/sound.mp3');
 
 function renderDom(arrResult) {
   while (autocompleteResult.hasChildNodes()) {
@@ -20,7 +20,7 @@ function renderDom(arrResult) {
   arrResult.forEach((element) => {
     const resultItem = document.createElement('div');
     resultItem.setAttribute('class', `result-item fade-${i += 100}`);
-    audio.play();
+    // audio.play();
     resultItem.style.animationDelay = `${i}ms`;
     resultItem.style.animationName = 'fade';
     resultItem.style.animationDuration = '0.25s';
@@ -38,7 +38,6 @@ inputSearch.addEventListener(
     // eslint-disable-next-line no-console
     console.log(e.target.value);
     let result = wordFilter(e.target.value, testArray);
-    console.log(result);
     if (!e.target.value) {
       result = [];
     }

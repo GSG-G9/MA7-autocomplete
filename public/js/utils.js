@@ -3,4 +3,8 @@ const wordFilter = (frag, array) => array.filter(
       === frag.toLowerCase().trim(),
 );
 
-module.exports = wordFilter;
+export default wordFilter;
+
+if (module !== 'undefined') {
+  module.exports = wordFilter;
+}

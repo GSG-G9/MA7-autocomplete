@@ -5,6 +5,7 @@ const extentions = {
   '.css': 'text/css',
   '.js': 'text/javascript',
   '.html': 'text/html',
+  '.png': 'image/png',
 };
 
 const router = (request, response) => {
