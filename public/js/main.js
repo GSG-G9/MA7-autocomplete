@@ -1,5 +1,5 @@
-import wordFilter from './utils';
-import testArray from './test-data';
+import wordFilter from './utils.js';
+import testArray from './test-data.js';
 
 const inputSearch = document.getElementById('autocomplete-input');
 const autocompleteResult = document.getElementById('autocomplete-result');
